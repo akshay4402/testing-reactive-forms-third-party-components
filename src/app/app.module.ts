@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { DemoFormComponent } from './demo-form/demo-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdInputModule, MdSelectModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { WarriorFormService } from './warrior-form.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MdSelectModule,
     MdButtonModule
   ],
-  providers: [],
+  providers: [
+    WarriorFormService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

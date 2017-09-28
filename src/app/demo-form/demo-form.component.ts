@@ -1,5 +1,6 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR, Validators } from '@angular/forms';
+import { WarriorFormService } from '../warrior-form.service';
 
 @Component({
   selector: 'app-demo-form',
@@ -21,7 +22,7 @@ export class DemoFormComponent implements OnInit {
     {value: 'Ninja'},
     {value: 'Robot'}
   ];
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private warriorFormService: WarriorFormService) { }
 
   ngOnInit() {
     this.warriorForm = this.fb.group({
@@ -32,13 +33,8 @@ export class DemoFormComponent implements OnInit {
 
   onSubmit() {
     if (this.warriorForm.valid) {
-      this.callServiceMethod(this.warriorForm.value);
+      this.warriorFormService.submitToServer(this.warriorForm.value);
     }
-  }
-
-  // in a real app this would be a service function we inject
-  callServiceMethod(value: {name: string, type: string}) {
-    console.log('Submitted form with value:', value);
   }
 
 }
