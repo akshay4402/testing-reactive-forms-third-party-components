@@ -23,7 +23,7 @@ describe('DemoFormComponent', () => {
           useValue: jasmine.createSpyObj('WarriorFormService', ['submitToServer'])
         }
       ],
-      imports: [ FormsModule, ReactiveFormsModule ],
+      imports: [ ReactiveFormsModule ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     });
 
