@@ -1,25 +1,32 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DemoFormComponent } from './demo-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MockMdSelectComponent } from '../../test-helpers/mock-md-select.mock';
 
 describe('DemoFormComponent', () => {
-  let component: DemoFormComponent;
-  let fixture: ComponentFixture<DemoFormComponent>;
 
-  beforeEach(async(() => {
+  function setup() {
+
     TestBed.configureTestingModule({
-      declarations: [ DemoFormComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [
+        DemoFormComponent,
+        MockMdSelectComponent
+      ],
+      imports: [ ReactiveFormsModule ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+    });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DemoFormComponent);
-    component = fixture.componentInstance;
+    const fixture: ComponentFixture<DemoFormComponent> = TestBed.createComponent(DemoFormComponent);
+
     fixture.detectChanges();
-  });
+    const component: DemoFormComponent = fixture.componentInstance;
+    return {fixture, component};
+  }
 
   it('should create', () => {
+    const {component} = setup();
     expect(component).toBeTruthy();
   });
 });
