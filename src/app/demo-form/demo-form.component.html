@@ -1,10 +1,12 @@
 <h2>Create a Warrior</h2>
 <form [formGroup]="warriorForm" (ngSubmit)="onSubmit()" novalidate>
-  <md-form-field>
-    <input mdInput placeholder="Name" formControlName="name">
-  </md-form-field>
-  <md-select placeholder="Type" formControlName="type">
-    <md-option *ngFor="let type of types" [value]="type.value">{{type.value}}</md-option>
-  </md-select>
-  <button md-button color="primary" type="submit">Submit</button>
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Type" formControlName="type">
+      <mat-option *ngFor="let type of types" [value]="type.value">{{type.value}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button color="primary" type="submit">Submit</button>
 </form>

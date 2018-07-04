@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DemoFormComponent } from './demo-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MockMdSelectComponent } from '../../test-helpers/mock-md-select.mock';
+import { MockMdSelectComponent } from '../../test-helpers/mock-mat-select.mock';
 import { By } from '@angular/platform-browser';
 import { INVALID } from '@angular/forms/src/model';
 import { WarriorFormService } from '../warrior-form.service';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('DemoFormComponent', () => {
 
@@ -23,8 +23,8 @@ describe('DemoFormComponent', () => {
           useValue: jasmine.createSpyObj('WarriorFormService', ['submitToServer'])
         }
       ],
-      imports: [ ReactiveFormsModule ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      imports: [ ReactiveFormsModule, NoopAnimationsModule],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA]
     });
 
     const fixture: ComponentFixture<DemoFormComponent> = TestBed.createComponent(DemoFormComponent);
@@ -48,22 +48,21 @@ describe('DemoFormComponent', () => {
 
   it('should update the form when you fill in the type "select" field', () => {
     const {fixture, component} = setup();
-    const typeSelect: MockMdSelectComponent = fixture.debugElement.query(By.css('md-select')).componentInstance;
+    const typeSelect: MockMdSelectComponent = fixture.debugElement.query(By.css('mat-select')).componentInstance;
 
     typeSelect.propagateChange('Ninja');
     expect(component.warriorForm.value.type).toEqual('Ninja');
   });
 
-  it('should bind type array to the md-options in the view', () => {
+  it('should bind type array to the mat-options in the view', () => {
     const {fixture} = setup();
-    const options: NodeList = fixture.nativeElement.querySelectorAll('md-option');
+    const options: NodeList = fixture.nativeElement.querySelectorAll('mat-option');
 
     const results = [];
     // use a loop as NodeLists do not support map
     for (let i = 0; i <  options.length; i++) {
       results.push(options[i].textContent);
     }
-
     expect(results).toEqual(['Pirate', 'Ninja', 'Robot']);
   });
 

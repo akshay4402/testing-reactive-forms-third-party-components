@@ -3,7 +3,7 @@ import { Component, forwardRef } from '@angular/core';
 import { MockReactiveFormsElement } from './mock-reactive-forms-element.mock';
 
 @Component({
-  selector: 'md-select', // match the selector to the element we are mocking
+  selector: 'mat-select', // match the selector to the element we are mocking
   template: '<ng-content></ng-content>', // add ng content to render the inner md-options elements
   providers: [
     {

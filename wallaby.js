@@ -5,6 +5,8 @@ var compilerOptions = Object.assign(
   require('./tsconfig.json').compilerOptions,
   require('./src/tsconfig.spec.json').compilerOptions);
 
+compilerOptions.module = 'CommonJs';
+
 module.exports = function (wallaby) {
 
   var webpackPostprocessor = wallabyWebpack({
@@ -14,16 +16,15 @@ module.exports = function (wallaby) {
     ],
 
     module: {
-      loaders: [
-        {test: /\.css$/, loader: ['raw-loader', 'css-loader']},
+      rules: [
+        {test: /\.css$/, loader: ['raw-loader']},
         {test: /\.html$/, loader: 'raw-loader'},
         {test: /\.ts$/, loader: '@ngtools/webpack', include: /node_modules/, query: {tsConfigPath: 'tsconfig.json'}},
         {test: /\.js$/, loader: 'angular2-template-loader', exclude: /node_modules/},
-        {test: /\.json$/, loader: 'json-loader'},
         {test: /\.styl$/, loaders: ['raw-loader', 'stylus-loader']},
-        {test: /\.less$/, loaders: ['raw-loader', 'less-loader']},
+        {test: /\.less$/, loaders: ['raw-loader', {loader: 'less-loader', options: {paths: [__dirname]}}]},
         {test: /\.scss$|\.sass$/, loaders: ['raw-loader', 'sass-loader']},
-        {test: /\.(jpg|png)$/, loader: 'url-loader?limit=128000'}
+        {test: /\.(jpg|png|svg)$/, loader: 'url-loader?limit=128000'}
       ]
     },
 
@@ -51,7 +52,8 @@ module.exports = function (wallaby) {
     ],
 
     tests: [
-      {pattern: 'src/**/*spec.ts', load: false}
+      {pattern: 'src/**/*spec.ts', load: false},
+      {pattern: 'src/**/*e2e-spec.ts', ignore: true}
     ],
 
     testFramework: 'jasmine',
