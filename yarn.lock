@@ -107,7 +107,7 @@
     "@angular-devkit/core" "0.7.5"
     rxjs "^6.0.0"
 
-"@angular/animations@^6.1.4":
+"@angular/animations@^6.0.0":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-6.1.4.tgz#ca17acd62b9328404671a569fbf3065472527174"
   dependencies:
@@ -134,7 +134,7 @@
     symbol-observable "^1.2.0"
     yargs-parser "^10.0.0"
 
-"@angular/common@^6.1.4":
+"@angular/common@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-6.1.4.tgz#825de5b1fb98db5a1d3d2253ad7181bb25477551"
   dependencies:
@@ -149,25 +149,25 @@
     reflect-metadata "^0.1.2"
     tsickle "^0.32.1"
 
-"@angular/compiler@^6.1.4":
+"@angular/compiler@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-6.1.4.tgz#479e792ce012dc8481f1d87b919fcddb11c8eee0"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@^6.1.4":
+"@angular/core@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-6.1.4.tgz#2602ecc031bbb4ad968a7db78786017e92d19b98"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/forms@^6.1.4":
+"@angular/forms@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.1.4.tgz#d0b83f9cd4cb35f58ee67766d17aae0cbd7de561"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/http@^6.1.4":
+"@angular/http@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.4.tgz#0ab24a51075daaba60a4241200c44dcfcd87da5e"
   dependencies:
@@ -185,19 +185,19 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/platform-browser-dynamic@^6.1.4":
+"@angular/platform-browser-dynamic@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-6.1.4.tgz#1af3549decadfb8e73513d917eaa5479184c39ea"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser@^6.1.4":
+"@angular/platform-browser@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-6.1.4.tgz#a5763f549f2073ba30b9d8baf8512c8076e8d58b"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/router@^6.1.4":
+"@angular/router@^6.0.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-6.1.4.tgz#ec6d7400baea46386e3bbcf3e3acb0135f368fac"
   dependencies:
@@ -1464,7 +1464,7 @@ copy-webpack-plugin@^4.5.1:
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
 
-core-js@^2.2.0, core-js@^2.4.0, core-js@^2.4.1:
+core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.4:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -4131,9 +4131,9 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-ng-mocks@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ng-mocks/-/ng-mocks-6.1.0.tgz#b75b643e948cdd9c35fb500b5359df00690e8319"
+ng-mocks@^6.2.0:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/ng-mocks/-/ng-mocks-6.2.1.tgz#4655336de88eefec80032563b1ee968457d2dc9b"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -4823,7 +4823,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-protractor@~5.4.2:
+protractor@~5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/protractor/-/protractor-5.4.0.tgz#e71c9c1f5cf6c5e9bdbcdb71e7f31b17ffd2878f"
   dependencies:

@@ -5,14 +5,7 @@ import { WarriorFormService } from '../warrior-form.service';
 @Component({
   selector: 'app-demo-form',
   templateUrl: './demo-form.component.html',
-  styleUrls: ['./demo-form.component.css'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => DemoFormComponent),
-      multi: true
-    }
-  ]
+  styleUrls: ['./demo-form.component.css']
 })
 export class DemoFormComponent implements OnInit {
 

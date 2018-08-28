@@ -7,12 +7,8 @@ import {By} from '@angular/platform-browser';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ComponentFixture, fakeAsync, flush, TestBed} from '@angular/core/testing';
 import {OverlayContainer} from '@angular/cdk/overlay';
-import {MockComponent, MockedComponent} from 'ng-mocks';
-
-// type MockedComponent<T> = T & {
-//   __simulateChange(value: any): void;
-//   __simulateTouch(): void;
-// };
+import { MockedComponent, MockComponent } from 'ng-mocks';
+// import { MockComponent } from '../../test-helpers/mock-component';
 
 describe('DemoFormComponent', () => {
   describe('Without Mocks', () => {
